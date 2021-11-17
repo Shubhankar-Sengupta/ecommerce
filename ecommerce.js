@@ -53,7 +53,7 @@ carousel_select.addEventListener('slid.bs.carousel', (evt) => { // arrow functio
     mainModelExecution();
 });
 
-carousel_select.addEventListener('click', (evt) => { // arrow function.
+carousel_select.addEventListener('click', (evt) => { // arrow function. // addtional listener if we scroll through the modal and exit.
     mainModelExecution();
 });
 
@@ -248,19 +248,19 @@ function chainIn(image) {
 
     image.addEventListener('click', (evt) => {
 
-        if (image.firstElementChild.src === main_carousel_item[0].firstElementChild.src) {
+        if (evt.target.src === new_modal_thumbnail[0].firstElementChild.src) {
             modal_pop_up(new_modal_thumbnail, 0, 1, 2, 3, 'thumbnail-act');
         }
 
-        else if (image.firstElementChild.src === main_carousel_item[1].firstElementChild.src) {
+        else if (evt.target.src === new_modal_thumbnail[1].firstElementChild.src) {
             modal_pop_up(new_modal_thumbnail, 1, 0, 2, 3, 'thumbnail-act');
         }
 
-        else if (image.firstElementChild.src === main_carousel_item[2].firstElementChild.src) {
+        else if (evt.target.src === new_modal_thumbnail[2].firstElementChild.src) {
             modal_pop_up(new_modal_thumbnail, 2, 1, 0, 3, 'thumbnail-act');
         }
 
-        else if (image.firstElementChild.src === main_carousel_item[3].firstElementChild.src) {
+        else if (evt.target.src === new_modal_thumbnail[3].firstElementChild.src) {
             modal_pop_up(new_modal_thumbnail, 3, 1, 2, 0, 'thumbnail-act');
         }
 
@@ -269,9 +269,16 @@ function chainIn(image) {
 };
 
 
-main_carousel_item.forEach((image) => {
-    chainIn(image);
-});
+function image_pass_on() {
+
+    thumbnail_images.forEach((image) => {
+        chainIn(image);
+    });
+
+}
+
+image_pass_on();
+
 
 
 function check_thumbnail_1(evt, item_1, item_2, item_3) { // this is the parameters that it accepts.
