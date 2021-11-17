@@ -233,6 +233,47 @@ thumbnail_images.forEach((image) => {
 });
 
 
+
+function modal_pop_up(modal, add, first, second, third, class1) {
+
+    modal[add].classList.add(class1);
+    modal[first].classList.remove(class1);
+    modal[second].classList.remove(class1);
+    modal[third].classList.remove(class1);
+
+}
+
+
+function chainIn(image) {
+
+    image.addEventListener('click', (evt) => {
+
+        if (image.firstElementChild.src === main_carousel_item[0].firstElementChild.src) {
+            modal_pop_up(new_modal_thumbnail, 0, 1, 2, 3, 'thumbnail-act');
+        }
+
+        else if (image.firstElementChild.src === main_carousel_item[1].firstElementChild.src) {
+            modal_pop_up(new_modal_thumbnail, 1, 0, 2, 3, 'thumbnail-act');
+        }
+
+        else if (image.firstElementChild.src === main_carousel_item[2].firstElementChild.src) {
+            modal_pop_up(new_modal_thumbnail, 2, 1, 0, 3, 'thumbnail-act');
+        }
+
+        else if (image.firstElementChild.src === main_carousel_item[3].firstElementChild.src) {
+            modal_pop_up(new_modal_thumbnail, 3, 1, 2, 0, 'thumbnail-act');
+        }
+
+    });
+
+};
+
+
+main_carousel_item.forEach((image) => {
+    chainIn(image);
+});
+
+
 function check_thumbnail_1(evt, item_1, item_2, item_3) { // this is the parameters that it accepts.
 
     evt.target.classList.add('thumbnail-act');
@@ -266,44 +307,6 @@ new_modal_thumbnail.forEach((image) => {
 
     });
 
-});
-
-
-function modal_pop_up(modal, add, first, second, third, class1) {
-
-    modal[add].classList.add(class1);
-    modal[first].classList.remove(class1);
-    modal[second].classList.remove(class1);
-    modal[third].classList.remove(class1);
-
-}
-
-
-function chainIn(image) {
-
-    image.addEventListener('click', (evt) => {
-
-        if (main_carousel_item1[0].classList.contains('active')) {
-            modal_pop_up(new_modal_thumbnail, 0, 1, 2, 3, 'thumbnail-act');
-        }
-
-        else if (main_carousel_item1[1].classList.contains('active')) {
-            modal_pop_up(new_modal_thumbnail, 1, 0, 2, 3, 'thumbnail-act');
-        }
-
-        else if (main_carousel_item1[2].classList.contains('active')) {
-            modal_pop_up(new_modal_thumbnail, 2, 1, 0, 3, 'thumbnail-act');
-        }
-
-        else if (main_carousel_item1[3].classList.contains('active')) {
-            modal_pop_up(new_modal_thumbnail, 3, 1, 2, 0, 'thumbnail-act');
-        }
-    });
-};
-
-
-main_carousel_item.forEach((image) => {
-    chainIn(image);
 });
 
 
