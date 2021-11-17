@@ -248,19 +248,19 @@ function chainIn(image) {
 
     image.addEventListener('click', (evt) => {
 
-        if (evt.target.src === new_modal_thumbnail[0].firstElementChild.src) {
+        if (evt.target.src === main_carousel_item[0].firstElementChild.src) {
             modal_pop_up(new_modal_thumbnail, 0, 1, 2, 3, 'thumbnail-act');
         }
 
-        else if (evt.target.src === new_modal_thumbnail[1].firstElementChild.src) {
+        else if (evt.target.src === main_carousel_item[1].firstElementChild.src) {
             modal_pop_up(new_modal_thumbnail, 1, 0, 2, 3, 'thumbnail-act');
         }
 
-        else if (evt.target.src === new_modal_thumbnail[2].firstElementChild.src) {
+        else if (evt.target.src === main_carousel_item[2].firstElementChild.src) {
             modal_pop_up(new_modal_thumbnail, 2, 1, 0, 3, 'thumbnail-act');
         }
 
-        else if (evt.target.src === new_modal_thumbnail[3].firstElementChild.src) {
+        else if (evt.target.src === main_carousel_item[3].firstElementChild.src) {
             modal_pop_up(new_modal_thumbnail, 3, 1, 2, 0, 'thumbnail-act');
         }
 
@@ -271,7 +271,7 @@ function chainIn(image) {
 
 function image_pass_on() {
 
-    thumbnail_images.forEach((image) => {
+    main_carousel_item.forEach((image) => {
         chainIn(image);
     });
 
