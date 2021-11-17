@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <!--Encoding UTF-8 Unicode Transformation Format 8 bit-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="ecommerce.css">
+
+</head>
+
+<body>
+
+  <header class="site-header container">
+
+    <h1 class="site-logo">
+
+      <img src="./images/logo.svg" alt="sneakers-logo">
+
+    </h1>
+
+    <nav class="navigation navbar navbar-light">
+
+      <button class="btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-collpase"
+        aria-controls="offcanvas-collpase">
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+      <ul class="navbar-nav offcanvas offcanvas-start" tabindex="-1" id="offcanvas-collpase">
+
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+
+        <div class="offcanvas-body">
+
+          <li class="nav-item"><a class="nav-link" href="#">Collections</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Men</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Women</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+
+        </div>
+
+      </ul>
+
+      <ul class="navabar-nav d-md-flex d-none">
+
+        <li class="nav-item"><a class="nav-link" href="#">Collections</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Men</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Women</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+
+      </ul>
+
+    </nav>
+
+
+
+    <section class="cart-avatar">
+
+      <span class="position-relative">
+
+        <img class="cart-click" src=".\images\icon-cart.svg" alt="icon-cart" data-bs-toggle="modal"
+          data-bs-target="#exampleModal">
+
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-semi-info visually-hidden"
+          style="font-size: x-small;">
+        </span>
+
+      </span>
+
+
+      <!-- Modal-1-->
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog">
+
+          <div class="modal-content">
+
+            <div class="modal-header">
+
+              <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+
+            </div>
+
+            <div class="modal-body">
+              Your cart is empty.
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <img class="avatar-image" src=".\images\image-avatar.png" alt="avatar-image">
+
+    </section>
+
+  </header>
+
+
+  <main class="container adjustment">
+
+    <hr class="d-none d-md-block">
+
+    <div class="site-content">
+
+      <section class="product-images">
+
+        <h2 id="control_scroll" class="carousel slide products-scollable">
+
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+
+              <img class="img-fluid" src=".\images\image-product-1.jpg" alt="product-1-image">
+
+            </div>
+
+            <div class="carousel-item">
+
+              <img class="img-fluid" src=".\images\image-product-2.jpg" alt="product-2-image">
+
+            </div>
+
+
+            <div class="carousel-item">
+
+              <img class="img-fluid" src=".\images\image-product-3.jpg" alt="product-3-image">
+
+            </div>
+
+
+            <div class="carousel-item">
+
+              <img class="img-fluid" src=".\images\image-product-4.jpg" alt="product-4-image">
+
+            </div>
+
+
+          </div>
+
+          <a class="carousel-control-prev d-md-none" role="button">
+
+            <span class="prev-icon" data-bs-target="#control_scroll" data-bs-slide="prev" aria-hidden="true">
+
+              <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
+              </svg>
+
+            </span>
+            <span class="visually-hidden">Previous</span>
+
+          </a>
+
+          <a class="carousel-control-next d-md-none" role="button">
+
+            <span class="next-icon" data-bs-target="#control_scroll" data-bs-slide="next" aria-hidden="true">
+
+              <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
+              </svg>
+
+            </span>
+            <span class="visually-hidden">Next</span>
+
+          </a>
+
+        </h2>
+
+        <!-- Modal-2-->
+
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+          aria-hidden="true">
+
+          <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+              <div class="modal-header">
+
+                <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal" aria-label="Close">
+
+                  <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+
+                    <path
+                      d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+                      fill="#fff" fill-rule="evenodd" />
+
+                  </svg>
+
+                </button>
+
+              </div>
+
+              <div class="modal-body">
+
+                <h2 id="control_scroll1" class="carousel slide products-scollable">
+
+                  <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+
+                      <img class="img-fluid main-productimg" src=".\images\image-product-1.jpg" alt="product-1-image">
+
+                    </div>
+
+                    <div class="carousel-item">
+
+                      <img class="img-fluid" src=".\images\image-product-2.jpg" alt="product-2-image">
+
+                    </div>
+
+
+                    <div class="carousel-item">
+
+                      <img class="img-fluid" src=".\images\image-product-3.jpg" alt="product-3-image">
+
+                    </div>
+
+
+                    <div class="carousel-item">
+
+                      <img class="img-fluid" src=".\images\image-product-4.jpg" alt="product-4-image">
+
+                    </div>
+
+
+                  </div>
+
+                  <a class="carousel-control-prev" role="button">
+
+                    <span class="prev-icon" data-bs-target="#control_scroll1" data-bs-slide="prev" aria-hidden="true">
+
+                      <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
+                      </svg>
+
+                    </span>
+                    <span class="visually-hidden">Previous</span>
+
+                  </a>
+
+                  <a class="carousel-control-next" role="button">
+
+                    <span class="next-icon" data-bs-target="#control_scroll1" data-bs-slide="next" aria-hidden="true">
+
+                      <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
+                      </svg>
+
+                    </span>
+
+                    <span class="visually-hidden">Next</span>
+
+                  </a>
+
+                </h2>
+
+              </div>
+
+              <div class="d-grid checkset">
+
+                <a type="button" data-bs-target="#control_scroll1" data-bs-slide-to="0" aria-current="true"
+                  aria-label="Slide 1">
+
+                  <img class="img-fluid" src=".\images\image-product-1-thumbnail.jpg" alt="pro-1-thumb1">
+
+                </a>
+
+                <a type="button" data-bs-target="#control_scroll1" data-bs-slide-to="1" aria-label="Slide 2">
+
+                  <img class="img-fluid" src=".\images\image-product-2-thumbnail.jpg" alt="pro-2-thumb1">
+
+                </a>
+
+                <a type="button" data-bs-target="#control_scroll1" data-bs-slide-to="2" aria-label="Slide 3">
+
+                  <img class="img-fluid" src=".\images\image-product-3-thumbnail.jpg" alt="pro-3-thumb1">
+
+                </a>
+
+                <a type="button" data-bs-target="#control_scroll1" data-bs-slide-to="3" aria-label="Slide 4">
+
+                  <img class="img-fluid" src=".\images\image-product-4-thumbnail.jpg" alt="pro-4-thumb1">
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="thumbnail-images">
+
+          <a type="button" data-bs-target="#control_scroll" data-bs-slide-to="0" aria-current="true"
+            aria-label="Slide 1">
+            <img class="img-fluid" src=".\images\image-product-1-thumbnail.jpg" alt="pro-1-thumb">
+          </a>
+
+          <a type="button" data-bs-target="#control_scroll" data-bs-slide-to="1" aria-current="true"
+            aria-label="Slide 2">
+            <img class="img-fluid" src=".\images\image-product-2-thumbnail.jpg" alt="pro-2-thumb">
+          </a>
+
+          <a type="button" data-bs-target="#control_scroll" data-bs-slide-to="2" aria-current="true"
+            aria-label="Slide 3">
+            <img class="img-fluid" src=".\images\image-product-3-thumbnail.jpg" alt="pro-3-thumb">
+          </a>
+
+          <a type="button" data-bs-target="#control_scroll" data-bs-slide-to="3" aria-current="true"
+            aria-label="Slide 4">
+            <img class="img-fluid" src=".\images\image-product-4-thumbnail.jpg" alt="pro-4-thumb">
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <section class="sneakers-info-main">
+
+        <h6 class="sneaker-nm">Sneaker Company</h6>
+
+        <div class="sneaker-title">Fall Limited Edition Sneakers</div>
+
+        <div class="sub-info-sneaker">These low-profile sneakers are your perfect casual wear companion. Featuring a
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</div>
+
+        <div class="section-content-display">
+
+          <div class="rates">
+
+            <span class="final-rate">$125.00</span>
+            <span class="discount badge">50%</span>
+            <div class="amount-org"><del>$250.00</del></div>
+
+          </div>
+
+          <div class="counter">
+
+            <span class="count badge">
+
+              <img class="minus-sign" tabindex="0" src="./images/icon-minus.svg" alt="minus-sign">
+              <span class="count-result">0</span>
+              <img class="plus-sign" tabindex="0" src="./images/icon-plus.svg" alt="plus-sign">
+
+            </span>
+
+          </div>
+
+          <div class="cart-fill d-grid">
+
+            <button type="button" class="btn btn-primary">
+
+              <!--hidden from accessibility tree.-->
+
+              <svg class="svg-cart-button" width="22" aria-hidden="true" height="20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                  fill="#69707D" fill-rule="nonzero" />
+              </svg>
+
+
+              <span class="cart-label">Add to cart</span>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Shubhankar Sengupta</a>.
+  </div>
+
+</body>
+
+<script src="ecommerce.js"></script>
+
+</html>

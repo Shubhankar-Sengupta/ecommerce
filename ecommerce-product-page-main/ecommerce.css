@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+ul, li {
+    list-style: none;
+    display: inline;
+}
+
+.container {
+    margin-top: 2em;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1em;
+}
+
+.site-logo {
+    display: flex;
+}
+
+.navigation {
+   display: flex; 
+   flex-grow: 1;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.navigation .nav-link {
+    color: #69707D;
+    font-size: .86em;  
+    position:relative;  
+    
+}
+
+
+.navbar-toggler-icon {
+    vertical-align: unset;
+}
+
+
+.btn:focus {
+    box-shadow: none;
+}
+
+
+nav.navigation .modal-backdrop {
+    opacity: .5;
+}
+
+
+#offcanvas-collpase + ul {
+    margin-top: 1em;
+    flex-grow: 1;
+    justify-content: flex-start;
+}
+
+#offcanvas-collpase .nav-link {
+    font-weight: 700;
+    color: #1D2026;
+} 
+
+.offcanvas-header > button.btn-close {
+    padding-left: 0px;
+} 
+
+.offcanvas-start {
+    width: 300px;
+}
+
+.avatar-image {
+    width: 30%;
+    cursor: pointer;
+}
+
+.avatar-image:hover {
+    border: 3px solid #FF7E1B;
+    border-radius: 50%; 
+    transition: all .12s ease-out; 
+}
+
+.cart-avatar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-content {
+    display: grid;
+    margin-top: 3em;
+    grid-template-columns: .7fr 1fr;
+    gap: 15px;
+    padding: 25px;
+}
+
+.thumbnail-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.thumbnail-images a:nth-of-type(1) .apply-op, .thumbnail-act {
+    border: 3px solid #FF7E1B;
+    opacity: .6;
+}
+
+
+.thumbnail-images > *:hover {
+    cursor: pointer;
+    opacity: .6;
+}
+
+.products-scollable img, .thumbnail-images img, .thumbnail-act {
+    border-radius: 5%;
+}
+
+
+.sneakers-info-main {
+    padding: 80px;
+    padding-right: 130px;
+    padding-left: 90px;
+}
+
+.sneakers-info-main > * {
+    margin-bottom: 1.5em;
+}
+
+
+.sneaker-nm {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #FF7E1B;
+    letter-spacing: 2px;
+    font-size: .72em;
+}
+
+
+.sneaker-title {
+    font-weight: bolder;
+    font-size: 2.34em;
+    margin-bottom: 30px;
+}
+
+
+.sub-info-sneaker {
+    color: #69707D;
+    font-size: .9em;
+    line-height: 1.802em;
+}
+
+
+.section-content-display {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:10px;
+}
+
+
+.counter {
+    display: grid;
+    grid-column: 1/2;
+}
+
+
+.cart-fill {
+    grid-column: 2/4;
+}
+
+
+.cart-fill > .btn.btn-primary > img {
+    margin-right: .45em;
+}
+
+.cart-label {
+    font-weight: 700;
+    font-size: .9em;
+}
+
+
+.discount {
+    color: #FF7E1B;
+    background-color: rgba(255, 126, 27, .2);
+    max-width: 36px;
+}
+
+
+.count {
+    display: flex;
+    color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, .05);
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.modal-body > img:nth-of-type(1) {
+    border-radius: 10%;  
+}
+
+.modal-body > button {
+    border-radius: 10px;
+}
+
+
+.modal-body > img:nth-of-type(2), .count > img, .pointer, .cart-avatar > img:nth-of-type(1):hover, .cart-click {
+    cursor: pointer;
+}
+
+
+.btn.btn-primary , .btn-primary-1 {
+    background-color:#FF7E1B;
+    border-color: rgb(255, 255, 255);
+    padding: .6em;
+    color: #fff;
+}
+
+.btn.btn-primary:hover {
+    opacity: .65;
+}
+
+.rates {
+    display: grid;
+    justify-items: end;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 6px;
+}
+
+.final-rate {
+    color: #1D2026;
+    font-weight: 700;
+}
+
+.amount-org {
+    color: #B6BCC8;
+    font-weight: 700;
+    justify-self: start;
+}
+
+.amount-org > del {
+    font-size: .75em;
+}
+
+
+#exampleModal > .modal-dialog {
+    margin-top: 6rem;
+    margin-left: 60rem;
+    max-width: 360px;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, .3);
+    border-radius: 15%;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #69707D;
+    min-height: 200px;
+}
+
+#exampleModal .modal-title, #exampleModal .modal-body {
+    font-size: .95rem;
+    font-weight: 700;
+}
+
+#exampleModal .modal-content {
+    border: none;
+}
+
+.grid-modal-body {
+    display: grid;
+    grid-template-columns: .75fr 3fr .5fr;
+    gap: 13px;
+}
+
+
+.button-modal {
+    grid-column: 1/4;
+}
+
+
+.bg-semi-info {
+    background-color: #FF7E1B;
+}
+
+
+.pop-up-carousel-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.adjustment {
+    margin-top: 0px;
+}
+
+
+.pop-up-div {
+    width: 100px;
+    height: 100px;
+    background-color: #FF7E1B;
+}
+
+#exampleModal1  .modal-content {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+
+#exampleModal1  .modal-header {
+    justify-content: flex-end;
+    border-bottom: none;
+}
+
+.btn-outline-light {
+    border: none;
+}
+
+.btn-outline-light:hover {
+    background-color: transparent;
+}
+
+.checkset {
+    grid-template-columns: repeat(4, .25fr);
+    padding:3em;
+    gap:.9em;
+}
+
+.checkset img {
+    border-radius: 5%;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    opacity: 1;
+}
+
+
+/* prev-icon and next-icon elements itself needs a height*/
+
+.prev-icon { 
+    left: -35px;  
+}
+
+.next-icon { 
+    right: -35px; 
+}
+
+
+.prev-icon, .next-icon {
+    background-size: 10px 10px;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    position: relative;
+}
+
+
+.modal-fullscreen-md-down {
+    height: auto;
+}
+
+
+.random:hover {
+    fill: #FF7E1B;
+}
+
+
+@media (min-width:768px) {
+
+    .navigation .nav-link::after {
+        content: "";    /*generated value needed property for the pseudo element as default is normal computed to none for pseudo elemnt*/
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        bottom: -56px;
+        left: 0;
+        background-color: #FF7E1B;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all .55s ease-in-out;
+    }
+    
+    
+    .navigation .nav-link:hover::after {
+        visibility: visible;
+        transform: scaleX(.9);  
+    }
+
+}
+
+
+
+@media (min-width:768px) and (max-width:1382px) {
+    
+    .site-content {
+        grid-template-columns: minmax(1fr, 200px) minmax(300px, 1fr);
+    }
+
+    .sneakers-info-main {
+        padding: 2em;
+    }
+
+    .sneaker-title {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        font-size: 1.5em;
+    }
+
+    .btn.btn-primary {
+        padding: 6px;
+    }
+
+    .cart-fill {
+        grid-column: 3/5;
+    }
+
+    .counter, .rates {
+        grid-column: 1/3;
+    }
+
+    .rates {
+        justify-items: start;
+    }
+
+    .amount-org {
+        grid-column: 1/2;
+    }
+
+    .container {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    #exampleModal .modal-dialog {
+        margin-left: 400px;
+    }
+
+}
+
+
+@media (min-width:1365px) and (max-width:1400px) {
+
+    .final-rate, .discount {
+        justify-self: start;
+    }
+
+    .rates {
+        grid-column: 1/3;
+    }
+
+    .amount-org {
+        grid-column: 1/2;
+    }
+
+}
+
+
+@media (min-width:992px) and (max-width:1382px) {
+
+    .sneakers-info-main {
+        padding: 3.5em;
+    }
+
+    #exampleModal .modal-dialog {
+        margin-left: 600px;
+    }
+
+}
+
+@media (min-width:768px) and (max-width:992px) {
+    
+    .site-content {
+        grid-template-columns: minmax(150px, 1fr) minmax(190px, 1fr);
+    }
+
+    .sneaker-title {
+        font-size: 1.15em;
+    }
+
+    .sub-info-sneaker {
+        font-size: .8em;
+    }
+
+}
+
+
+@media (max-width:768px) {
+
+    .navigation .nav-link:hover {
+        text-decoration: 2px #FF7E1B solid underline;
+    }
+
+    .site-content {
+        grid-template-columns: 1fr;
+        padding: 0px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0px;
+    }
+
+    .products-scollable  img {
+        border-radius: 0%;
+    }
+
+    .site-header {
+        justify-content: flex-start;
+    }
+
+    .cart-avatar {
+        margin-left: auto; /*Checks the remaining space and allots it entirely to the element*/
+    }
+
+    .navigation {
+        order: -1;
+        flex-grow: 0;
+    }
+
+    .thumbnail-images {
+        display: none;
+    }
+
+    .sneakers-info-main {
+        padding: 12px;
+    }
+
+    .rates {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column: 1/5;
+        justify-items: start;
+    }
+
+    .counter, .cart-fill {
+        grid-column: 1/5;
+    }
+
+    .counter {
+        grid-template-rows: 40px;
+    }
+
+    .amount-org {
+        grid-column: 3/4;
+        justify-self: end;
+    }
+
+    .prev-icon,  .next-icon {
+        position: static;
+    }
+
+    .btn.btn-primary {
+        box-shadow: 0px 20px 50px -20px #FF7E1B;
+    }
+
+    #exampleModal .modal-content {
+        border-radius: 3%;
+    }
+
+    #exampleModal .modal-dialog {
+        margin: 150px auto;
+    }
+    
+}
+
+
+@media (width:768px) {
+
+    .navigation > button {
+        display: inline !important;
+    }
+
+    ul.navabar-nav {
+        display: none !important;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        display: flex !important;
+    }
+
+    .adjustment hr {
+        height: 0px;
+    }
+
+}
+
+
+
+@media (min-width:280px) and (max-width:360px) {
+
+    .cart-avatar {
+        justify-content: space-around;
+    }
+
+    .sneaker-title {
+        font-size: 1.2em;
+    }
+
+}
+
+
+@media (max-width:280px) {
+
+    .offcanvas-start {
+        width: 150px;
+    }
+
+    .sneaker-title {
+        font-size: 1.2em;
+    }
+
+    .site-logo  > * {
+        width: calc(1.56rem + 20vw); /*calc() function is used to give a width*/
+    }
+
+    .cart-avatar {
+        justify-content: space-around;
+    }
+
+}
+
