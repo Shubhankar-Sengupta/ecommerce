@@ -64,7 +64,7 @@ nav.navigation .modal-backdrop {
     color: #1D2026;
 } 
 
-.offcanvas-header > button.btn-close {
+.offcanvas-header > div.btn-close {
     padding-left: 0px;
 } 
 
