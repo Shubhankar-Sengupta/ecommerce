@@ -385,6 +385,3 @@ function svgEffects(emnt, emnt1, number, classtype) {
 hoverEffects(close_button, 'random');
 svgEffects(prev_svg, next_svg, 0, 'random-1');
 svgEffects(prev_svg, next_svg, 1, 'random-1');
-
-
-
