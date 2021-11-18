@@ -566,6 +566,7 @@ nav.navigation .modal-backdrop {
 
     #exampleModal .modal-dialog {
         margin: 150px auto;
+        box-shadow: none;
     }
     
 }
@@ -595,11 +596,12 @@ nav.navigation .modal-backdrop {
 @media (max-width:500px) {
 
     #control_scroll .carousel-item {
-        max-height: 310px;
+        max-height: 330px;
     }
 
-    #control_scroll .carousel-item > img {
-        object-fit: unset;
+    #exampleModal .modal-dialog {
+        min-width: 86vw;
+        padding: .5em;
     }
 
 }
