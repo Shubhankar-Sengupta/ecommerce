@@ -21,6 +21,8 @@ const prev_icon = document.querySelector('#control_scroll1 .prev-icon');
 const next_icon = document.querySelector('#control_scroll1 .next-icon');
 const prev_svg = document.querySelectorAll('.prev-icon > svg');
 const next_svg = document.querySelectorAll('.next-icon > svg');
+const close_button = document.querySelector('.modal-header svg');
+
 
 // logic for modal-pop-up-click-desirable-image.
 
@@ -366,6 +368,23 @@ function prev_func() {
 function next_func() {
     conditionalsIcon(3, 0, 1, 2);
 }
+
+
+// hover effects and svg effects when we hover over the close button and the svg next and previous buttons. 
+
+function hoverEffects(emnt, classtype) {
+    emnt.firstElementChild.classList.add(classtype);
+}
+
+function svgEffects(emnt, emnt1, number, classtype) {
+
+    emnt[number].firstElementChild.classList.add(classtype);
+    emnt1[number].firstElementChild.classList.add(classtype);
+}
+
+hoverEffects(close_button, 'random');
+svgEffects(prev_svg, next_svg, 0, 'random-1');
+svgEffects(prev_svg, next_svg, 1, 'random-1');
 
 
 

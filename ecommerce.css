@@ -368,6 +368,10 @@ nav.navigation .modal-backdrop {
     fill: #FF7E1B;
 }
 
+.random-1:hover {
+    stroke: #FF7E1B;
+}
+
 
 @media (min-width:768px) {
 
@@ -583,6 +587,19 @@ nav.navigation .modal-backdrop {
 
     .adjustment hr {
         height: 0px;
+    }
+
+}
+
+
+@media (max-width:500px) {
+
+    #control_scroll .carousel-item {
+        max-height: 310px;
+    }
+
+    #control_scroll .carousel-item > img {
+        object-fit: unset;
     }
 
 }
