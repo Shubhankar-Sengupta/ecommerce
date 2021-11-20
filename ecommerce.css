@@ -9,6 +9,10 @@ ul, li {
     display: inline;
 }
 
+svg {
+    vertical-align: baseline;
+}
+
 .container {
     margin-top: 2em;
 }
@@ -64,7 +68,7 @@ nav.navigation .modal-backdrop {
     color: #1D2026;
 } 
 
-.offcanvas-header > div.btn-close {
+.offcanvas-header > span.btn-close {
     padding-left: 0px;
 } 
 
@@ -80,7 +84,7 @@ nav.navigation .modal-backdrop {
 .avatar-image:hover {
     border: 3px solid #FF7E1B;
     border-radius: 50%; 
-    transition: all .12s ease-out; 
+    transition: all .12s ease-in; 
 }
 
 .cart-avatar {
@@ -356,6 +360,7 @@ nav.navigation .modal-backdrop {
     width: 1.5em;
     height: 1.5em;
     position: relative;
+    font-size: 1.5em;
 }
 
 
